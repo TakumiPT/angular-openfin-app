@@ -1,4 +1,6 @@
-# AngularOpenfinApp
+# Angular Openfin App
+
+Angular project using openfin
 
 npm run install
 
