@@ -2,7 +2,7 @@
 
 Angular project using openfin
 
-npm run install
+npm run ci
 
 npm run dev
 
