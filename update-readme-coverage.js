@@ -34,9 +34,9 @@ const badgeUrl = `https://img.shields.io/badge/coverage-${coveragePercentage}%25
 // Read the README file
 let readmeContent = fs.readFileSync(readmeFilePath, 'utf8');
 
-// Search for the placeholder text and replace it with the coverage badge
+// Update the coverage badge in the README content
 readmeContent = readmeContent.replace(
-  '<COVERAGE_BADGE_URL>', // Placeholder text to be replaced
+  /!\[Coverage Badge\]\([^)]+\)/, // Regular expression to match the existing coverage badge
   `![Coverage Badge](${badgeUrl})`
 );
 

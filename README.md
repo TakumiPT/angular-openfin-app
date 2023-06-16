@@ -2,7 +2,7 @@
 
 ## Test Quality and Coverage
 
-- Test Coverage: ![Coverage Badge](https://img.shields.io/badge/coverage-75.00%25-brightgreen) <!-- Replace <COVERAGE_BADGE_URL> with the actual coverage badge URL -->
+![Coverage Badge](https://img.shields.io/badge/coverage-75.00%25-brightgreen)
 
 Angular project using openfin
 
