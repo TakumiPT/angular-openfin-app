@@ -6,6 +6,6 @@
 
 Angular project using openfin
 
-npm run ci
+npm run ci - clean node modules install
 
-npm run dev
+npm run dev - starts the angular project and after 20s launches openfin
