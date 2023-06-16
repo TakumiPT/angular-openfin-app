@@ -2,7 +2,7 @@
 
 ## Test Quality and Coverage
 
-![Coverage Badge](https://img.shields.io/badge/coverage-75.00%25-brightgreen)
+![Coverage Badge](https://img.shields.io/badge/coverage-100.00%25-brightgreen)
 
 Angular project using openfin
 

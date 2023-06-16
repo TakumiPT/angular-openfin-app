@@ -7,6 +7,14 @@ describe('AppInitializeService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(AppInitializeService);
+  });
+
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+  it('should initialize successfully when fin is available', fakeAsync(() => {
 
     // Mock the fin object
     const mockFin = {
@@ -18,19 +26,9 @@ describe('AppInitializeService', () => {
       }
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).fin = mockFin;
-  });
-
-  afterEach(() => {
-    // Clean up the fin object
-    delete (window as any).fin;
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-
-  it('should initialize successfully when fin is available', fakeAsync(() => {
+    
     let resolved = false;
     let rejected = false;
 
@@ -48,7 +46,8 @@ describe('AppInitializeService', () => {
 
   it('should reject initialization when fin is not available', fakeAsync(() => {
     // Remove the mock fin object
-    delete (window as any).fin;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any).fin = null;
 
     let resolved = false;
     let rejected = false;

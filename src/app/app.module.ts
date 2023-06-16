@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AppInitializeService } from './app-initialize.service';
 
 export function initializeApp(appInitService: AppInitializeService) {
-  return (): Promise<any> => { 
+  return (): Promise<void> => { 
     return appInitService.init();
   }
 }
