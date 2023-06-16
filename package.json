@@ -1,6 +1,11 @@
 {
   "name": "angular-openfin-app",
   "version": "0.0.0",
+  "author": "Filipe Freire",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TakumiPT/angular-openfin-app.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,8 +13,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "openfin:dev": "npx openfin --launch --config app.json",
-    "dev": "concurrently \"npm run start\" \"sleep 10 && npm run openfin:dev\""
+    "dev": "concurrently \"npm run start\" \"sleep 20 && npm run openfin:dev\""
   },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.1.0",
