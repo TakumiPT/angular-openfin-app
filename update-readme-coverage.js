@@ -28,16 +28,19 @@ const calculateCoveragePercentage = (data) => {
 // Get the coverage percentage
 const coveragePercentage = calculateCoveragePercentage(coverageData);
 
+// Generate the Shields.io badge URL
+const badgeUrl = `https://img.shields.io/badge/coverage-${coveragePercentage}%25-brightgreen`;
+
 // Read the README file
 let readmeContent = fs.readFileSync(readmeFilePath, 'utf8');
 
-// Update the coverage percentage in the README content
+// Search for the placeholder text and replace it with the coverage badge
 readmeContent = readmeContent.replace(
-  /\[\d+\.\d+%]/, // Regular expression to match the coverage percentage within square brackets
-  `[${coveragePercentage}%]`
+  '<COVERAGE_BADGE_URL>', // Placeholder text to be replaced
+  `![Coverage Badge](${badgeUrl})`
 );
 
 // Write the updated content back to the README file
 fs.writeFileSync(readmeFilePath, readmeContent, 'utf8');
 
-console.log('README file updated with the coverage percentage.');
+console.log('README file updated with the coverage badge.');
